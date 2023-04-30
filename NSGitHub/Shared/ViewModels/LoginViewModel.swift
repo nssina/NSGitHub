@@ -40,7 +40,7 @@ final class LoginViewModel: NSObject, ObservableObject {
                     let result = try await self.loginService.getAccessToken(id: Client.id, secret: Client.secret, code: code, uri: Client.uri, httpMethod: .post)
                     
                     // Step 3: Save access token in keychain
-                    Keychain.shared.save(result.accessToken, forKey: KeychainKeys.accessToken)
+                    Keychain.shared.save(result.accessToken, forKey: Keys.accessToken)
                 } catch {
                     #if DEBUG
                     print(error.localizedDescription)

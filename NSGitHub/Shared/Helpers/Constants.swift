@@ -15,7 +15,7 @@ struct Client {
 }
 
 // MARK: - Keychain keys
-struct KeychainKeys {
+struct Keys {
     static let accessToken = "accessToken"
 }
 
