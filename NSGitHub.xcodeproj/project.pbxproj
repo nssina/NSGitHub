@@ -11,6 +11,17 @@
 		D3430AE729FAF7FC006729E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3430AE629FAF7FC006729E3 /* Assets.xcassets */; };
 		D3430AEB29FAF7FC006729E3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3430AEA29FAF7FC006729E3 /* Preview Assets.xcassets */; };
 		D3F3974129FE89140087429C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F3974029FE89140087429C /* LoginView.swift */; };
+		D3F3974629FE8BA00087429C /* HTTPContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F3974529FE8BA00087429C /* HTTPContentType.swift */; };
+		D3F3974829FE8BCD0087429C /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F3974729FE8BCD0087429C /* Endpoint.swift */; };
+		D3F3974A29FE8C350087429C /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F3974929FE8C350087429C /* RequestError.swift */; };
+		D3F3974C29FE8CB80087429C /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F3974B29FE8CB80087429C /* HTTPClient.swift */; };
+		D3F3975029FE9D460087429C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F3974F29FE9D460087429C /* LoginViewModel.swift */; };
+		D3F3975629FEAC300087429C /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F3975529FEAC300087429C /* Token.swift */; };
+		D3F3975929FEAD000087429C /* LoginEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F3975829FEAD000087429C /* LoginEndpoint.swift */; };
+		D3F3975B29FEB0650087429C /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F3975A29FEB0650087429C /* LoginService.swift */; };
+		D3F3975E29FEB6CB0087429C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F3975D29FEB6CB0087429C /* Constants.swift */; };
+		D3F3976029FEBF400087429C /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F3975F29FEBF400087429C /* HTTPMethod.swift */; };
+		D3F3976229FEE3DB0087429C /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F3976129FEE3DB0087429C /* Keychain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +31,17 @@
 		D3430AE829FAF7FC006729E3 /* NSGitHub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NSGitHub.entitlements; sourceTree = "<group>"; };
 		D3430AEA29FAF7FC006729E3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D3F3974029FE89140087429C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D3F3974529FE8BA00087429C /* HTTPContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPContentType.swift; sourceTree = "<group>"; };
+		D3F3974729FE8BCD0087429C /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		D3F3974929FE8C350087429C /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		D3F3974B29FE8CB80087429C /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		D3F3974F29FE9D460087429C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		D3F3975529FEAC300087429C /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		D3F3975829FEAD000087429C /* LoginEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEndpoint.swift; sourceTree = "<group>"; };
+		D3F3975A29FEB0650087429C /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		D3F3975D29FEB6CB0087429C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D3F3975F29FEBF400087429C /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		D3F3976129FEE3DB0087429C /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				D3F3973E29FE88D20087429C /* App */,
+				D3F3974329FE8AA70087429C /* Core */,
+				D3F3974D29FE9D360087429C /* Shared */,
 				D3430AE829FAF7FC006729E3 /* NSGitHub.entitlements */,
 				D3430AE929FAF7FC006729E3 /* Preview Content */,
 			);
@@ -91,6 +115,79 @@
 				D3430AE629FAF7FC006729E3 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D3F3974329FE8AA70087429C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D3F3975729FEACF00087429C /* Endpoints */,
+				D3F3975429FEAA610087429C /* Models */,
+				D3F3975129FEAA190087429C /* Service */,
+				D3F3974429FE8AAF0087429C /* Network */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		D3F3974429FE8AAF0087429C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D3F3974529FE8BA00087429C /* HTTPContentType.swift */,
+				D3F3974729FE8BCD0087429C /* Endpoint.swift */,
+				D3F3974929FE8C350087429C /* RequestError.swift */,
+				D3F3974B29FE8CB80087429C /* HTTPClient.swift */,
+				D3F3975F29FEBF400087429C /* HTTPMethod.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D3F3974D29FE9D360087429C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				D3F3975C29FEB6C20087429C /* Helpers */,
+				D3F3974E29FE9D3B0087429C /* ViewModels */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		D3F3974E29FE9D3B0087429C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D3F3974F29FE9D460087429C /* LoginViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D3F3975129FEAA190087429C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D3F3975A29FEB0650087429C /* LoginService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D3F3975429FEAA610087429C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D3F3975529FEAC300087429C /* Token.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D3F3975729FEACF00087429C /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				D3F3975829FEAD000087429C /* LoginEndpoint.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		D3F3975C29FEB6C20087429C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D3F3976129FEE3DB0087429C /* Keychain.swift */,
+				D3F3975D29FEB6CB0087429C /* Constants.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,8 +260,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3F3975629FEAC300087429C /* Token.swift in Sources */,
+				D3F3975E29FEB6CB0087429C /* Constants.swift in Sources */,
+				D3F3976229FEE3DB0087429C /* Keychain.swift in Sources */,
 				D3F3974129FE89140087429C /* LoginView.swift in Sources */,
+				D3F3974A29FE8C350087429C /* RequestError.swift in Sources */,
+				D3F3974C29FE8CB80087429C /* HTTPClient.swift in Sources */,
+				D3F3974629FE8BA00087429C /* HTTPContentType.swift in Sources */,
+				D3F3975929FEAD000087429C /* LoginEndpoint.swift in Sources */,
+				D3F3974829FE8BCD0087429C /* Endpoint.swift in Sources */,
+				D3F3976029FEBF400087429C /* HTTPMethod.swift in Sources */,
+				D3F3975B29FEB0650087429C /* LoginService.swift in Sources */,
 				D3430AE329FAF7FC006729E3 /* NSGitHubApp.swift in Sources */,
+				D3F3975029FE9D460087429C /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,8 +409,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -341,8 +448,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
