@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		D3430AE329FAF7FC006729E3 /* NSGitHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3430AE229FAF7FC006729E3 /* NSGitHubApp.swift */; };
-		D3430AE529FAF7FC006729E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3430AE429FAF7FC006729E3 /* ContentView.swift */; };
 		D3430AE729FAF7FC006729E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3430AE629FAF7FC006729E3 /* Assets.xcassets */; };
 		D3430AEB29FAF7FC006729E3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3430AEA29FAF7FC006729E3 /* Preview Assets.xcassets */; };
+		D3F3974129FE89140087429C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F3974029FE89140087429C /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D3430ADF29FAF7FC006729E3 /* NSGitHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSGitHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3430AE229FAF7FC006729E3 /* NSGitHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSGitHubApp.swift; sourceTree = "<group>"; };
-		D3430AE429FAF7FC006729E3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D3430AE629FAF7FC006729E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3430AE829FAF7FC006729E3 /* NSGitHub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NSGitHub.entitlements; sourceTree = "<group>"; };
 		D3430AEA29FAF7FC006729E3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D3F3974029FE89140087429C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +52,7 @@
 		D3430AE129FAF7FC006729E3 /* NSGitHub */ = {
 			isa = PBXGroup;
 			children = (
-				D3430AE229FAF7FC006729E3 /* NSGitHubApp.swift */,
-				D3430AE429FAF7FC006729E3 /* ContentView.swift */,
-				D3430AE629FAF7FC006729E3 /* Assets.xcassets */,
+				D3F3973E29FE88D20087429C /* App */,
 				D3430AE829FAF7FC006729E3 /* NSGitHub.entitlements */,
 				D3430AE929FAF7FC006729E3 /* Preview Content */,
 			);
@@ -67,6 +65,32 @@
 				D3430AEA29FAF7FC006729E3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D3F3973E29FE88D20087429C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D3F3973F29FE88E20087429C /* Views */,
+				D3F3974229FE89520087429C /* Resources */,
+				D3430AE229FAF7FC006729E3 /* NSGitHubApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D3F3973F29FE88E20087429C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D3F3974029FE89140087429C /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D3F3974229FE89520087429C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D3430AE629FAF7FC006729E3 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3430AE529FAF7FC006729E3 /* ContentView.swift in Sources */,
+				D3F3974129FE89140087429C /* LoginView.swift in Sources */,
 				D3430AE329FAF7FC006729E3 /* NSGitHubApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,9 +301,9 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -287,7 +311,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sinarabiei.NSGitHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -315,9 +341,9 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -325,7 +351,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sinarabiei.NSGitHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
