@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LoginView: View {
+    @ObservedObject private var vm = LoginViewModel()
+    
     var body: some View {
         ZStack {
             Image("GitHubLogo")
@@ -21,7 +23,7 @@ struct LoginView: View {
                 Spacer()
                 
                 Button {
-                    
+                    vm.login()
                 } label: {
                     Text("Sign in with GitHub")
                         .foregroundColor(.primary)
