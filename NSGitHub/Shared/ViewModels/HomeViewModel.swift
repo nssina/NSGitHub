@@ -54,14 +54,6 @@ final class HomeViewModel: ObservableObject {
         }
     }
     
-    private func stopLoading() {
-        timer?.invalidate()
-        timer = Timer.scheduledTimer(withTimeInterval: dismissLoadingAfterSeconds, repeats: false) { [weak self] _ in
-            guard let self = self else { return }
-            self.isLoading = false
-        }
-    }
-    
     func sort(_ sort: SortType) {
         guard sort != sortType else { return }
         sortType = sort
@@ -71,6 +63,14 @@ final class HomeViewModel: ObservableObject {
             repos = repos.reversed()
         case .descending:
             repos = repos.reversed()
+        }
+    }
+    
+    private func stopLoading() {
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: dismissLoadingAfterSeconds, repeats: false) { [weak self] _ in
+            guard let self = self else { return }
+            self.isLoading = false
         }
     }
 }
