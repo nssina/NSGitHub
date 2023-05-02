@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - Token
 struct Token: Codable {
     let accessToken: String
     let scope: String?
