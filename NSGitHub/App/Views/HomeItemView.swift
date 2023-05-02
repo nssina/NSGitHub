@@ -25,7 +25,7 @@ struct HomeItemView: View {
                         image
                             .resizable()
                     } placeholder: {
-                        ProgressView()
+                        Image(systemName: "person.crop.circle")
                     }
                     .frame(width: 30, height: 30)
                     .clipShape(Circle())
@@ -60,6 +60,7 @@ struct HomeItemView: View {
                 // Stars
                 HStack(spacing: 1) {
                     Image(systemName: stars > 0 ? "star.fill" : "star")
+                        .foregroundColor(stars > 0 ? .yellow : .primary)
                     Text(String(stars))
                 }
                 
@@ -83,7 +84,7 @@ struct HomeItemView: View {
 // MARK: - Preview
 struct HomeItemView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeItemView(avatar: "avatar",
+        HomeItemView(avatar: "person.crop.circle",
                      owner: "nssina",
                      name: "NSAsyncCachedImage",
                      description: "Lightweight way to load and cache images asynchronously in SwiftUI views",
