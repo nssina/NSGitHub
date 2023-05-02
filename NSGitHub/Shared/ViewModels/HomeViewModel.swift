@@ -24,6 +24,7 @@ final class HomeViewModel: ObservableObject {
     @Published private(set) var isLoading: Bool = false
     @Published private(set) var sortType: SortType = .ascending
     
+    private var page: Int = 1
     private var timer: Timer?
     private var token: String?
     private var dismissLoadingAfterSeconds: CGFloat = 2.0
@@ -36,21 +37,27 @@ final class HomeViewModel: ObservableObject {
     func getReposList() async {
         guard let token = token else { return }
         
-        DispatchQueue.main.async { [weak self] in
-            self?.isLoading = true
+        if page < 2 {
+            DispatchQueue.main.async { [weak self] in
+                self?.isLoading = true
+            }
         }
         
         do {
-            let result = try await service.getReposList(token: token)
+            let result = try await service.getReposList(token: token, page: page)
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else { return }
-                self.repos = result
+                self.repos.append(contentsOf: result)
+                
+                if result.count == 30 { page += 1 }
             }
         } catch  {
             #if DEBUG
             print(error)
             #endif
-            isLoading = false
+            DispatchQueue.main.async { [weak self] in
+                self?.isLoading = false
+            }
         }
     }
     
@@ -64,6 +71,13 @@ final class HomeViewModel: ObservableObject {
         case .descending:
             repos = repos.reversed()
         }
+    }
+    
+    func loadMoreItems(item: Repo) {
+        let number = repos.count - 5
+        guard item.id ?? 0 == repos[number].id else { return }
+        
+        Task { await getReposList() }
     }
     
     private func stopLoading() {

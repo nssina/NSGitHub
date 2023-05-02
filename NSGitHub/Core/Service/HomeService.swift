@@ -8,12 +8,12 @@
 import Foundation
 
 protocol HomeServiceDelegate {
-    func getReposList(token: String) async throws -> [Repo]
+    func getReposList(token: String, page: Int) async throws -> [Repo]
 }
 
 struct HomeService: HTTPClient, HomeServiceDelegate {
-    func getReposList(token: String) async throws -> [Repo]  {
-        let response = try await sendRequest(endpoint: HomeEndpoint.repos(token: token), httpMethod: .get, responseModel: [Repo].self)
+    func getReposList(token: String, page: Int) async throws -> [Repo]  {
+        let response = try await sendRequest(endpoint: HomeEndpoint.repos(token: token, page: page), httpMethod: .get, responseModel: [Repo].self)
         
         return response
     }

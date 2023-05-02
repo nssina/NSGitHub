@@ -33,6 +33,9 @@ struct HomeView: View {
                                          description: item.description ?? "",
                                          language: item.language ?? "",
                                          stars: item.stargazersCount ?? 0)
+                            .onAppear {
+                                vm.loadMoreItems(item: item)
+                            }
                         }
                     }
                 }
