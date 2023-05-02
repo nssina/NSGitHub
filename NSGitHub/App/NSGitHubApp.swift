@@ -9,9 +9,20 @@ import SwiftUI
 
 @main
 struct NSGitHubApp: App {
+    
+    private var token: String?
+    
+    init() {
+        self.token = Keychain.shared.load(withKey: Keys.accessToken)
+    }
+                                                     
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            if token != nil {
+                HomeView()
+            } else {
+                LoginView()
+            }
         }
     }
 }
