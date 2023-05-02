@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D30863432A013990005DAEAA /* HomeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30863422A013990005DAEAA /* HomeItemView.swift */; };
+		D30863492A0157E6005DAEAA /* LottieUI in Frameworks */ = {isa = PBXBuildFile; productRef = D30863482A0157E6005DAEAA /* LottieUI */; };
+		D30863502A0159B7005DAEAA /* cat_head_light.json in Resources */ = {isa = PBXBuildFile; fileRef = D308634E2A0159B6005DAEAA /* cat_head_light.json */; };
+		D30863512A0159B7005DAEAA /* cat_head_dark.json in Resources */ = {isa = PBXBuildFile; fileRef = D308634F2A0159B7005DAEAA /* cat_head_dark.json */; };
 		D3430AE329FAF7FC006729E3 /* NSGitHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3430AE229FAF7FC006729E3 /* NSGitHubApp.swift */; };
 		D3430AE729FAF7FC006729E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3430AE629FAF7FC006729E3 /* Assets.xcassets */; };
 		D3430AEB29FAF7FC006729E3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3430AEA29FAF7FC006729E3 /* Preview Assets.xcassets */; };
+		D35D59AD2A001E3E00D9893A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D59AC2A001E3E00D9893A /* HomeView.swift */; };
+		D35D59AF2A0024B300D9893A /* HomeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D59AE2A0024B300D9893A /* HomeEndpoint.swift */; };
+		D35D59B22A0025C500D9893A /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D59B12A0025C500D9893A /* Repo.swift */; };
+		D35D59B42A0060A000D9893A /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D59B32A0060A000D9893A /* HomeService.swift */; };
+		D35D59B62A006A7300D9893A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D59B52A006A7300D9893A /* HomeViewModel.swift */; };
 		D3F3974129FE89140087429C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F3974029FE89140087429C /* LoginView.swift */; };
 		D3F3974629FE8BA00087429C /* HTTPContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F3974529FE8BA00087429C /* HTTPContentType.swift */; };
 		D3F3974829FE8BCD0087429C /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F3974729FE8BCD0087429C /* Endpoint.swift */; };
@@ -25,11 +34,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D30863422A013990005DAEAA /* HomeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemView.swift; sourceTree = "<group>"; };
+		D308634E2A0159B6005DAEAA /* cat_head_light.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cat_head_light.json; sourceTree = "<group>"; };
+		D308634F2A0159B7005DAEAA /* cat_head_dark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cat_head_dark.json; sourceTree = "<group>"; };
 		D3430ADF29FAF7FC006729E3 /* NSGitHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSGitHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3430AE229FAF7FC006729E3 /* NSGitHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSGitHubApp.swift; sourceTree = "<group>"; };
 		D3430AE629FAF7FC006729E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3430AE829FAF7FC006729E3 /* NSGitHub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NSGitHub.entitlements; sourceTree = "<group>"; };
 		D3430AEA29FAF7FC006729E3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D35D59AC2A001E3E00D9893A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D35D59AE2A0024B300D9893A /* HomeEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEndpoint.swift; sourceTree = "<group>"; };
+		D35D59B12A0025C500D9893A /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		D35D59B32A0060A000D9893A /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		D35D59B52A006A7300D9893A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		D3F3974029FE89140087429C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D3F3974529FE8BA00087429C /* HTTPContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPContentType.swift; sourceTree = "<group>"; };
 		D3F3974729FE8BCD0087429C /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -49,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D30863492A0157E6005DAEAA /* LottieUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				D3F3974029FE89140087429C /* LoginView.swift */,
+				D35D59AC2A001E3E00D9893A /* HomeView.swift */,
+				D30863422A013990005DAEAA /* HomeItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -113,6 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				D3430AE629FAF7FC006729E3 /* Assets.xcassets */,
+				D308634F2A0159B7005DAEAA /* cat_head_dark.json */,
+				D308634E2A0159B6005DAEAA /* cat_head_light.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -153,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				D3F3974F29FE9D460087429C /* LoginViewModel.swift */,
+				D35D59B52A006A7300D9893A /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -161,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				D3F3975A29FEB0650087429C /* LoginService.swift */,
+				D35D59B32A0060A000D9893A /* HomeService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -169,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				D3F3975529FEAC300087429C /* Token.swift */,
+				D35D59B12A0025C500D9893A /* Repo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -177,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				D3F3975829FEAD000087429C /* LoginEndpoint.swift */,
+				D35D59AE2A0024B300D9893A /* HomeEndpoint.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -206,6 +232,9 @@
 			dependencies = (
 			);
 			name = NSGitHub;
+			packageProductDependencies = (
+				D30863482A0157E6005DAEAA /* LottieUI */,
+			);
 			productName = NSGitHub;
 			productReference = D3430ADF29FAF7FC006729E3 /* NSGitHub.app */;
 			productType = "com.apple.product-type.application";
@@ -234,6 +263,9 @@
 				Base,
 			);
 			mainGroup = D3430AD629FAF7FB006729E3;
+			packageReferences = (
+				D30863472A0157E6005DAEAA /* XCRemoteSwiftPackageReference "LottieUI" */,
+			);
 			productRefGroup = D3430AE029FAF7FC006729E3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -250,6 +282,8 @@
 			files = (
 				D3430AEB29FAF7FC006729E3 /* Preview Assets.xcassets in Resources */,
 				D3430AE729FAF7FC006729E3 /* Assets.xcassets in Resources */,
+				D30863502A0159B7005DAEAA /* cat_head_light.json in Resources */,
+				D30863512A0159B7005DAEAA /* cat_head_dark.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +295,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3F3975629FEAC300087429C /* Token.swift in Sources */,
+				D35D59B62A006A7300D9893A /* HomeViewModel.swift in Sources */,
+				D35D59AD2A001E3E00D9893A /* HomeView.swift in Sources */,
 				D3F3975E29FEB6CB0087429C /* Constants.swift in Sources */,
 				D3F3976229FEE3DB0087429C /* Keychain.swift in Sources */,
 				D3F3974129FE89140087429C /* LoginView.swift in Sources */,
@@ -269,10 +305,14 @@
 				D3F3974629FE8BA00087429C /* HTTPContentType.swift in Sources */,
 				D3F3975929FEAD000087429C /* LoginEndpoint.swift in Sources */,
 				D3F3974829FE8BCD0087429C /* Endpoint.swift in Sources */,
+				D35D59B42A0060A000D9893A /* HomeService.swift in Sources */,
 				D3F3976029FEBF400087429C /* HTTPMethod.swift in Sources */,
+				D35D59B22A0025C500D9893A /* Repo.swift in Sources */,
+				D35D59AF2A0024B300D9893A /* HomeEndpoint.swift in Sources */,
 				D3F3975B29FEB0650087429C /* LoginService.swift in Sources */,
 				D3430AE329FAF7FC006729E3 /* NSGitHubApp.swift in Sources */,
 				D3F3975029FE9D460087429C /* LoginViewModel.swift in Sources */,
+				D30863432A013990005DAEAA /* HomeItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,7 +450,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -449,7 +489,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -488,6 +528,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D30863472A0157E6005DAEAA /* XCRemoteSwiftPackageReference "LottieUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tfmart/LottieUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D30863482A0157E6005DAEAA /* LottieUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D30863472A0157E6005DAEAA /* XCRemoteSwiftPackageReference "LottieUI" */;
+			productName = LottieUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D3430AD729FAF7FB006729E3 /* Project object */;
 }
