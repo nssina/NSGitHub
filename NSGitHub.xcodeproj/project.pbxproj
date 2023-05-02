@@ -11,6 +11,13 @@
 		D30863492A0157E6005DAEAA /* LottieUI in Frameworks */ = {isa = PBXBuildFile; productRef = D30863482A0157E6005DAEAA /* LottieUI */; };
 		D30863502A0159B7005DAEAA /* cat_head_light.json in Resources */ = {isa = PBXBuildFile; fileRef = D308634E2A0159B6005DAEAA /* cat_head_light.json */; };
 		D30863512A0159B7005DAEAA /* cat_head_dark.json in Resources */ = {isa = PBXBuildFile; fileRef = D308634F2A0159B7005DAEAA /* cat_head_dark.json */; };
+		D30863532A018032005DAEAA /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30863522A018032005DAEAA /* DetailsView.swift */; };
+		D308636E2A018E53005DAEAA /* MarkdownWebView in Frameworks */ = {isa = PBXBuildFile; productRef = D308636D2A018E53005DAEAA /* MarkdownWebView */; };
+		D30863702A01A619005DAEAA /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D308636F2A01A619005DAEAA /* DetailsViewModel.swift */; };
+		D30863722A01A82F005DAEAA /* DetailsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30863712A01A82F005DAEAA /* DetailsEndpoint.swift */; };
+		D30863752A01AF8E005DAEAA /* github_dark.json in Resources */ = {isa = PBXBuildFile; fileRef = D30863732A01AF8E005DAEAA /* github_dark.json */; };
+		D30863762A01AF8E005DAEAA /* github_light.json in Resources */ = {isa = PBXBuildFile; fileRef = D30863742A01AF8E005DAEAA /* github_light.json */; };
+		D308637A2A01B2CB005DAEAA /* 404_error.json in Resources */ = {isa = PBXBuildFile; fileRef = D30863792A01B2CB005DAEAA /* 404_error.json */; };
 		D3430AE329FAF7FC006729E3 /* NSGitHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3430AE229FAF7FC006729E3 /* NSGitHubApp.swift */; };
 		D3430AE729FAF7FC006729E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3430AE629FAF7FC006729E3 /* Assets.xcassets */; };
 		D3430AEB29FAF7FC006729E3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3430AEA29FAF7FC006729E3 /* Preview Assets.xcassets */; };
@@ -37,6 +44,12 @@
 		D30863422A013990005DAEAA /* HomeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemView.swift; sourceTree = "<group>"; };
 		D308634E2A0159B6005DAEAA /* cat_head_light.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cat_head_light.json; sourceTree = "<group>"; };
 		D308634F2A0159B7005DAEAA /* cat_head_dark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cat_head_dark.json; sourceTree = "<group>"; };
+		D30863522A018032005DAEAA /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		D308636F2A01A619005DAEAA /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		D30863712A01A82F005DAEAA /* DetailsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsEndpoint.swift; sourceTree = "<group>"; };
+		D30863732A01AF8E005DAEAA /* github_dark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = github_dark.json; sourceTree = "<group>"; };
+		D30863742A01AF8E005DAEAA /* github_light.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = github_light.json; sourceTree = "<group>"; };
+		D30863792A01B2CB005DAEAA /* 404_error.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 404_error.json; sourceTree = "<group>"; };
 		D3430ADF29FAF7FC006729E3 /* NSGitHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSGitHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3430AE229FAF7FC006729E3 /* NSGitHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSGitHubApp.swift; sourceTree = "<group>"; };
 		D3430AE629FAF7FC006729E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,12 +80,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				D30863492A0157E6005DAEAA /* LottieUI in Frameworks */,
+				D308636E2A018E53005DAEAA /* MarkdownWebView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D30863542A01812F005DAEAA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D30863422A013990005DAEAA /* HomeItemView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		D3430AD629FAF7FB006729E3 = {
 			isa = PBXGroup;
 			children = (
@@ -122,9 +144,10 @@
 		D3F3973F29FE88E20087429C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D30863542A01812F005DAEAA /* Components */,
 				D3F3974029FE89140087429C /* LoginView.swift */,
 				D35D59AC2A001E3E00D9893A /* HomeView.swift */,
-				D30863422A013990005DAEAA /* HomeItemView.swift */,
+				D30863522A018032005DAEAA /* DetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -135,6 +158,9 @@
 				D3430AE629FAF7FC006729E3 /* Assets.xcassets */,
 				D308634F2A0159B7005DAEAA /* cat_head_dark.json */,
 				D308634E2A0159B6005DAEAA /* cat_head_light.json */,
+				D30863732A01AF8E005DAEAA /* github_dark.json */,
+				D30863742A01AF8E005DAEAA /* github_light.json */,
+				D30863792A01B2CB005DAEAA /* 404_error.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -176,6 +202,7 @@
 			children = (
 				D3F3974F29FE9D460087429C /* LoginViewModel.swift */,
 				D35D59B52A006A7300D9893A /* HomeViewModel.swift */,
+				D308636F2A01A619005DAEAA /* DetailsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -203,6 +230,7 @@
 			children = (
 				D3F3975829FEAD000087429C /* LoginEndpoint.swift */,
 				D35D59AE2A0024B300D9893A /* HomeEndpoint.swift */,
+				D30863712A01A82F005DAEAA /* DetailsEndpoint.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -234,6 +262,7 @@
 			name = NSGitHub;
 			packageProductDependencies = (
 				D30863482A0157E6005DAEAA /* LottieUI */,
+				D308636D2A018E53005DAEAA /* MarkdownWebView */,
 			);
 			productName = NSGitHub;
 			productReference = D3430ADF29FAF7FC006729E3 /* NSGitHub.app */;
@@ -265,6 +294,7 @@
 			mainGroup = D3430AD629FAF7FB006729E3;
 			packageReferences = (
 				D30863472A0157E6005DAEAA /* XCRemoteSwiftPackageReference "LottieUI" */,
+				D308636C2A018E53005DAEAA /* XCRemoteSwiftPackageReference "markdown-webview" */,
 			);
 			productRefGroup = D3430AE029FAF7FC006729E3 /* Products */;
 			projectDirPath = "";
@@ -283,7 +313,10 @@
 				D3430AEB29FAF7FC006729E3 /* Preview Assets.xcassets in Resources */,
 				D3430AE729FAF7FC006729E3 /* Assets.xcassets in Resources */,
 				D30863502A0159B7005DAEAA /* cat_head_light.json in Resources */,
+				D308637A2A01B2CB005DAEAA /* 404_error.json in Resources */,
 				D30863512A0159B7005DAEAA /* cat_head_dark.json in Resources */,
+				D30863752A01AF8E005DAEAA /* github_dark.json in Resources */,
+				D30863762A01AF8E005DAEAA /* github_light.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3F3975629FEAC300087429C /* Token.swift in Sources */,
+				D30863532A018032005DAEAA /* DetailsView.swift in Sources */,
 				D35D59B62A006A7300D9893A /* HomeViewModel.swift in Sources */,
 				D35D59AD2A001E3E00D9893A /* HomeView.swift in Sources */,
 				D3F3975E29FEB6CB0087429C /* Constants.swift in Sources */,
@@ -304,11 +338,13 @@
 				D3F3974C29FE8CB80087429C /* HTTPClient.swift in Sources */,
 				D3F3974629FE8BA00087429C /* HTTPContentType.swift in Sources */,
 				D3F3975929FEAD000087429C /* LoginEndpoint.swift in Sources */,
+				D30863702A01A619005DAEAA /* DetailsViewModel.swift in Sources */,
 				D3F3974829FE8BCD0087429C /* Endpoint.swift in Sources */,
 				D35D59B42A0060A000D9893A /* HomeService.swift in Sources */,
 				D3F3976029FEBF400087429C /* HTTPMethod.swift in Sources */,
 				D35D59B22A0025C500D9893A /* Repo.swift in Sources */,
 				D35D59AF2A0024B300D9893A /* HomeEndpoint.swift in Sources */,
+				D30863722A01A82F005DAEAA /* DetailsEndpoint.swift in Sources */,
 				D3F3975B29FEB0650087429C /* LoginService.swift in Sources */,
 				D3430AE329FAF7FC006729E3 /* NSGitHubApp.swift in Sources */,
 				D3F3975029FE9D460087429C /* LoginViewModel.swift in Sources */,
@@ -538,6 +574,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		D308636C2A018E53005DAEAA /* XCRemoteSwiftPackageReference "markdown-webview" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tomdai/markdown-webview";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -545,6 +589,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D30863472A0157E6005DAEAA /* XCRemoteSwiftPackageReference "LottieUI" */;
 			productName = LottieUI;
+		};
+		D308636D2A018E53005DAEAA /* MarkdownWebView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D308636C2A018E53005DAEAA /* XCRemoteSwiftPackageReference "markdown-webview" */;
+			productName = MarkdownWebView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

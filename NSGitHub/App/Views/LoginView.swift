@@ -6,18 +6,24 @@
 //
 
 import SwiftUI
+import LottieUI
 
 struct LoginView: View {
+    
     @ObservedObject private var vm = LoginViewModel()
+    @Environment(\.colorScheme) private var colorScheme
     
     var body: some View {
         ZStack {
-            Image("GitHubLogo")
-                .resizable()
-                .renderingMode(.template)
-                .foregroundColor(.primary)
-                .frame(width: 90, height: 90)
-                .padding(.bottom, 50)
+            if colorScheme == .light {
+                LottieView(Lottie.githubLight)
+                    .loopMode(.loop)
+                    .frame(width: 130, height: 130)
+            } else {
+                LottieView(Lottie.githubDark)
+                    .loopMode(.loop)
+                    .frame(width: 130, height: 130)
+            }
             
             VStack {
                 Spacer()
