@@ -27,6 +27,7 @@ struct HomeItemView: View {
                     } placeholder: {
                         Image(systemName: "person.crop.circle")
                     }
+                    .foregroundColor(.gray)
                     .frame(width: 30, height: 30)
                     .clipShape(Circle())
                 }
