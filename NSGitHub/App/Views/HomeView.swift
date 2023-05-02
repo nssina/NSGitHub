@@ -27,12 +27,14 @@ struct HomeView: View {
                 } else {
                     List {
                         ForEach(vm.repos, id: \.id) { item in
-                            HomeItemView(avatar: item.owner?.avatarURL ?? "",
-                                         owner: item.owner?.login ?? "",
-                                         name: item.name ?? "",
-                                         description: item.description ?? "",
-                                         language: item.language ?? "",
-                                         stars: item.stargazersCount ?? 0)
+                            NavigationLink(destination: DetailsView(item: item)) {
+                                HomeItemView(avatar: item.owner?.avatarURL ?? "",
+                                             owner: item.owner?.login ?? "",
+                                             name: item.name ?? "",
+                                             description: item.description ?? "",
+                                             language: item.language ?? "",
+                                             stars: item.stargazersCount ?? 0)
+                            }
                             .onAppear {
                                 vm.loadMoreItems(item: item)
                             }
