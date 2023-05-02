@@ -5,6 +5,7 @@
 //  Created by Sina Rabiei on 4/30/23.
 //
 
+import SwiftUI
 import Foundation
 import AuthenticationServices
 
@@ -41,6 +42,9 @@ final class LoginViewModel: NSObject, ObservableObject {
                     
                     // Step 3: Save access token in keychain
                     Keychain.shared.save(result.accessToken, forKey: Keys.accessToken)
+                    
+                    // Step 4: Show home view
+                    self.changeRootView()
                 } catch {
                     #if DEBUG
                     print(error.localizedDescription)
@@ -55,6 +59,14 @@ final class LoginViewModel: NSObject, ObservableObject {
         session.prefersEphemeralWebBrowserSession = true
 
         session.start()
+    }
+    
+    func changeRootView() {
+        DispatchQueue.main.async {
+            UIApplication.shared.connectedScenes
+                .flatMap { ($0 as? UIWindowScene)?.windows ?? [] }
+                .first { $0.isKeyWindow }?.rootViewController = UIHostingController(rootView: HomeView())
+        }
     }
 }
 
