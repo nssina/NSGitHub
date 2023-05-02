@@ -27,7 +27,7 @@ final class HomeViewModel: ObservableObject {
     private var page: Int = 1
     private var timer: Timer?
     private var token: String?
-    private var dismissLoadingAfterSeconds: CGFloat = 2.0
+    private var dismissLoadingAfterSeconds: CGFloat = 1.0
     
     init() {
         self.repos = []
@@ -47,7 +47,13 @@ final class HomeViewModel: ObservableObject {
             let result = try await service.getReposList(token: token, page: page)
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else { return }
-                self.repos.append(contentsOf: result)
+                
+                switch sortType {
+                case .ascending:
+                    self.repos.append(contentsOf: result)
+                case .descending:
+                    self.repos.append(contentsOf: result.reversed())
+                }
                 
                 if result.count == 30 { page += 1 }
             }
