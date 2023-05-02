@@ -25,7 +25,7 @@ struct HomeItemView: View {
                         image
                             .resizable()
                     } placeholder: {
-                        Image(systemName: "person.crop.circle")
+                        Image(systemName: SFSymbols.person)
                     }
                     .foregroundColor(.gray)
                     .frame(width: 30, height: 30)
@@ -60,7 +60,7 @@ struct HomeItemView: View {
             HStack(spacing: 15) {
                 // Stars
                 HStack(spacing: 1) {
-                    Image(systemName: stars > 0 ? "star.fill" : "star")
+                    Image(systemName: stars > 0 ? SFSymbols.starFill : SFSymbols.star)
                         .foregroundColor(stars > 0 ? .yellow : .primary)
                     Text(String(stars))
                 }
@@ -68,7 +68,7 @@ struct HomeItemView: View {
                 // Language
                 if !language.isEmpty {
                     HStack(spacing: 2) {
-                        Image(systemName: "hammer.fill")
+                        Image(systemName: SFSymbols.hammerFill)
                         Text(language)
                     }
                 }

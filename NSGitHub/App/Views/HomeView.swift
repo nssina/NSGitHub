@@ -19,7 +19,7 @@ struct HomeView: View {
             ZStack {
                 if vm.isLoading {
                     VStack(spacing: 10) {
-                        LottieView(colorScheme == .light ? "cat_head_light" : "cat_head_dark")
+                        LottieView(colorScheme == .light ? Lottie.catLight : Lottie.catDark)
                             .loopMode(.loop)
                             .frame(width: 130, height: 130)
                     }
@@ -40,7 +40,6 @@ struct HomeView: View {
                     }
                 }
             }
-            .navigationTitle("Home")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Menu {
@@ -51,7 +50,7 @@ struct HomeView: View {
                                 HStack {
                                     Text("Ascending")
                                     if vm.sortType == .ascending {
-                                        Image(systemName: "checkmark")
+                                        Image(systemName: SFSymbols.checkmark)
                                     }
                                 }
                             }
@@ -61,15 +60,16 @@ struct HomeView: View {
                             } label: {
                                 Text("Descending")
                                 if vm.sortType == .descending {
-                                    Image(systemName: "checkmark")
+                                    Image(systemName: SFSymbols.checkmark)
                                 }
                             }
                         }
                     } label: {
-                        Image(systemName: "line.3.horizontal.decrease.circle")
+                        Image(systemName: SFSymbols.sort)
                     }
                 }
             }
+            .navigationTitle("Home")
         }
         .task {
             await vm.getReposList()

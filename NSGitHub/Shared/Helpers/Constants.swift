@@ -23,3 +23,19 @@ struct Keys {
 struct CallbackScheme {
     static let url = "nsgithub"
 }
+
+// MARK: - SF Symbols
+struct SFSymbols {
+    static let checkmark = "checkmark"
+    static let sort = "line.3.horizontal.decrease.circle"
+    static let person = "person.crop.circle"
+    static let star = "star"
+    static let starFill = "star.fill"
+    static let hammerFill = "hammer.fill"
+}
+
+// MARK: - Lottie
+struct Lottie {
+    static let catLight = "cat_head_light"
+    static let catDark = "cat_head_dark"
+}
