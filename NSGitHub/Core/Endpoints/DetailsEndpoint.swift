@@ -26,8 +26,4 @@ extension DetailsEndpoint: Endpoint {
     var header: [String : String]? {
         return nil
     }
-    
-    var urlParams: [URLQueryItem]? {
-        return nil
-    }
 }

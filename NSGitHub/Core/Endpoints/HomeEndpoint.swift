@@ -29,8 +29,4 @@ extension HomeEndpoint: Endpoint {
             return ["Authorization" : "Bearer \(token)", "Accept": HTTPContentType.applicationJSON]
         }
     }
-    
-    var urlParams: [URLQueryItem]? {
-        return nil
-    }
 }

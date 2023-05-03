@@ -29,8 +29,4 @@ extension LoginEndpoint: Endpoint {
     var header: [String: String]? {
         return ["Accept": HTTPContentType.applicationJSON]
     }
-    
-    var urlParams: [URLQueryItem]? {
-        return nil
-    }
 }
