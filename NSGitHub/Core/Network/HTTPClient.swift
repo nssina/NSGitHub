@@ -17,11 +17,7 @@ extension HTTPClient {
         config.requestCachePolicy = .reloadIgnoringLocalCacheData
         config.urlCache = nil
         
-        var urlComponents = URLComponents(string: endpoint.baseURL + endpoint.path)
-        
-        if let urlParams = endpoint.urlParams {
-            urlComponents?.queryItems = urlParams
-        }
+        let urlComponents = URLComponents(string: endpoint.baseURL + endpoint.path)
         
         guard let url = urlComponents?.url else {
             throw RequestError.invalidURL
