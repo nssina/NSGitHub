@@ -13,7 +13,7 @@ struct DetailsView: View {
     var item: Repo?
     
     @Environment(\.colorScheme) private var colorScheme
-    @ObservedObject private var vm = DetailsViewModel()
+    @StateObject private var vm = DetailsViewModel()
     
     var body: some View {
         List {
