@@ -17,6 +17,7 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             ZStack {
+                /// Loading animation
                 if vm.isLoading {
                     VStack(spacing: 10) {
                         LottieView(colorScheme == .light ? Lottie.catLight : Lottie.catDark)
@@ -25,6 +26,8 @@ struct HomeView: View {
                     }
                     .padding(.bottom, 90)
                 } else {
+                    
+                    /// Repos list
                     List {
                         ForEach(vm.repos, id: \.id) { item in
                             NavigationLink(destination: DetailsView(item: item)) {

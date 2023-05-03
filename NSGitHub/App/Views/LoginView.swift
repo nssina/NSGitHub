@@ -15,6 +15,8 @@ struct LoginView: View {
     
     var body: some View {
         ZStack {
+            
+            /// GitHub animated logo
             if colorScheme == .light {
                 LottieView(Lottie.githubLight)
                     .loopMode(.loop)
@@ -28,6 +30,7 @@ struct LoginView: View {
             VStack {
                 Spacer()
                 
+                /// Login button
                 Button {
                     vm.login()
                 } label: {
@@ -39,6 +42,7 @@ struct LoginView: View {
                 .buttonStyle(.bordered)
                 .buttonBorderShape(.capsule)
                 
+                /// Privacy Policy
                 Text("By signing in you accept our [Term of use](https://docs.github.com/en/site-policy/github-terms/github-terms-of-service) and\n[Privacy policy](https://docs.github.com/en/site-policy/github-terms/github-terms-of-service).")
                     .font(.caption)
                     .foregroundColor(.secondary)
@@ -50,6 +54,7 @@ struct LoginView: View {
     }
 }
 
+// MARK: - Preview
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
