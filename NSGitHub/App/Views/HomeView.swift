@@ -30,7 +30,7 @@ struct HomeView: View {
                     if vm.repos.count > 0 {
                         /// Repos list
                         List {
-                            ForEach(vm.repos, id: \.id) { item in
+                            ForEach(vm.filteredItems, id: \.id) { item in
                                 NavigationLink(destination: DetailsView(item: item)) {
                                     HomeItemView(avatar: item.owner?.avatarURL ?? "",
                                                  owner: item.owner?.login ?? "",
@@ -45,6 +45,7 @@ struct HomeView: View {
                                 }
                             }
                         }
+                        .searchable(text: $vm.search)
                     } else {
                         /// 404 animation for empty state
                         HStack {

@@ -20,6 +20,7 @@ final class HomeViewModel: ObservableObject {
             stopLoading()
         }
     }
+    @Published var search: String = ""
     
     @Published private(set) var isLoading: Bool = false
     @Published private(set) var sortType: SortType = .ascending
@@ -28,6 +29,17 @@ final class HomeViewModel: ObservableObject {
     private var timer: Timer?
     private var token: String?
     private var dismissLoadingAfterSeconds: CGFloat = 1.0
+    
+    var filteredItems: [Repo] {
+        if search.isEmpty {
+            return repos
+        } else {
+            let keyword = search.lowercased()
+            return repos.filter { item in
+                item.name?.lowercased().contains(keyword) ?? false
+            }
+        }
+    }
     
     init() {
         self.repos = []
