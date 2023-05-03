@@ -17,15 +17,6 @@
         "revision" : "dd5b2f16213f89ab996a55fc2f51b56236da4bbe",
         "version" : "1.3.3"
       }
-    },
-    {
-      "identity" : "markdown-webview",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/tomdai/markdown-webview",
-      "state" : {
-        "revision" : "07e31c8de9b8106d997f77ea5c8fd996bdcf336d",
-        "version" : "2.0.0"
-      }
     }
   ],
   "version" : 2

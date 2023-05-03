@@ -12,7 +12,6 @@
 		D30863502A0159B7005DAEAA /* cat_head_light.json in Resources */ = {isa = PBXBuildFile; fileRef = D308634E2A0159B6005DAEAA /* cat_head_light.json */; };
 		D30863512A0159B7005DAEAA /* cat_head_dark.json in Resources */ = {isa = PBXBuildFile; fileRef = D308634F2A0159B7005DAEAA /* cat_head_dark.json */; };
 		D30863532A018032005DAEAA /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30863522A018032005DAEAA /* DetailsView.swift */; };
-		D308636E2A018E53005DAEAA /* MarkdownWebView in Frameworks */ = {isa = PBXBuildFile; productRef = D308636D2A018E53005DAEAA /* MarkdownWebView */; };
 		D30863702A01A619005DAEAA /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D308636F2A01A619005DAEAA /* DetailsViewModel.swift */; };
 		D30863722A01A82F005DAEAA /* DetailsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30863712A01A82F005DAEAA /* DetailsEndpoint.swift */; };
 		D30863752A01AF8E005DAEAA /* github_dark.json in Resources */ = {isa = PBXBuildFile; fileRef = D30863732A01AF8E005DAEAA /* github_dark.json */; };
@@ -26,6 +25,11 @@
 		D35D59B22A0025C500D9893A /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D59B12A0025C500D9893A /* Repo.swift */; };
 		D35D59B42A0060A000D9893A /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D59B32A0060A000D9893A /* HomeService.swift */; };
 		D35D59B62A006A7300D9893A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35D59B52A006A7300D9893A /* HomeViewModel.swift */; };
+		D39CBE382A02944E00678C52 /* template in Resources */ = {isa = PBXBuildFile; fileRef = D39CBE352A02944E00678C52 /* template */; };
+		D39CBE392A02944E00678C52 /* script in Resources */ = {isa = PBXBuildFile; fileRef = D39CBE362A02944E00678C52 /* script */; };
+		D39CBE3C2A02945900678C52 /* MarkdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39CBE3B2A02945900678C52 /* MarkdownView.swift */; };
+		D39CBE402A02948E00678C52 /* default-iOS in Resources */ = {isa = PBXBuildFile; fileRef = D39CBE3E2A02948E00678C52 /* default-iOS */; };
+		D39CBE412A02948E00678C52 /* default-macOS in Resources */ = {isa = PBXBuildFile; fileRef = D39CBE3F2A02948E00678C52 /* default-macOS */; };
 		D3F3974129FE89140087429C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F3974029FE89140087429C /* LoginView.swift */; };
 		D3F3974629FE8BA00087429C /* HTTPContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F3974529FE8BA00087429C /* HTTPContentType.swift */; };
 		D3F3974829FE8BCD0087429C /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F3974729FE8BCD0087429C /* Endpoint.swift */; };
@@ -60,6 +64,11 @@
 		D35D59B12A0025C500D9893A /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		D35D59B32A0060A000D9893A /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		D35D59B52A006A7300D9893A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		D39CBE352A02944E00678C52 /* template */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = template; sourceTree = "<group>"; };
+		D39CBE362A02944E00678C52 /* script */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = script; sourceTree = "<group>"; };
+		D39CBE3B2A02945900678C52 /* MarkdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownView.swift; sourceTree = "<group>"; };
+		D39CBE3E2A02948E00678C52 /* default-iOS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "default-iOS"; sourceTree = "<group>"; };
+		D39CBE3F2A02948E00678C52 /* default-macOS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "default-macOS"; sourceTree = "<group>"; };
 		D3F3974029FE89140087429C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D3F3974529FE8BA00087429C /* HTTPContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPContentType.swift; sourceTree = "<group>"; };
 		D3F3974729FE8BCD0087429C /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -80,7 +89,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D30863492A0157E6005DAEAA /* LottieUI in Frameworks */,
-				D308636E2A018E53005DAEAA /* MarkdownWebView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				D30863422A013990005DAEAA /* HomeItemView.swift */,
+				D39CBE3B2A02945900678C52 /* MarkdownView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -131,6 +140,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D39CBE3D2A02948200678C52 /* stylesheets */ = {
+			isa = PBXGroup;
+			children = (
+				D39CBE3E2A02948E00678C52 /* default-iOS */,
+				D39CBE3F2A02948E00678C52 /* default-macOS */,
+			);
+			path = stylesheets;
+			sourceTree = "<group>";
+		};
 		D3F3973E29FE88D20087429C /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +173,9 @@
 		D3F3974229FE89520087429C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D39CBE3D2A02948200678C52 /* stylesheets */,
+				D39CBE362A02944E00678C52 /* script */,
+				D39CBE352A02944E00678C52 /* template */,
 				D3430AE629FAF7FC006729E3 /* Assets.xcassets */,
 				D308634F2A0159B7005DAEAA /* cat_head_dark.json */,
 				D308634E2A0159B6005DAEAA /* cat_head_light.json */,
@@ -262,7 +283,6 @@
 			name = NSGitHub;
 			packageProductDependencies = (
 				D30863482A0157E6005DAEAA /* LottieUI */,
-				D308636D2A018E53005DAEAA /* MarkdownWebView */,
 			);
 			productName = NSGitHub;
 			productReference = D3430ADF29FAF7FC006729E3 /* NSGitHub.app */;
@@ -294,7 +314,6 @@
 			mainGroup = D3430AD629FAF7FB006729E3;
 			packageReferences = (
 				D30863472A0157E6005DAEAA /* XCRemoteSwiftPackageReference "LottieUI" */,
-				D308636C2A018E53005DAEAA /* XCRemoteSwiftPackageReference "markdown-webview" */,
 			);
 			productRefGroup = D3430AE029FAF7FC006729E3 /* Products */;
 			projectDirPath = "";
@@ -311,9 +330,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3430AEB29FAF7FC006729E3 /* Preview Assets.xcassets in Resources */,
+				D39CBE402A02948E00678C52 /* default-iOS in Resources */,
+				D39CBE412A02948E00678C52 /* default-macOS in Resources */,
 				D3430AE729FAF7FC006729E3 /* Assets.xcassets in Resources */,
 				D30863502A0159B7005DAEAA /* cat_head_light.json in Resources */,
+				D39CBE392A02944E00678C52 /* script in Resources */,
 				D308637A2A01B2CB005DAEAA /* 404_error.json in Resources */,
+				D39CBE382A02944E00678C52 /* template in Resources */,
 				D30863512A0159B7005DAEAA /* cat_head_dark.json in Resources */,
 				D30863752A01AF8E005DAEAA /* github_dark.json in Resources */,
 				D30863762A01AF8E005DAEAA /* github_light.json in Resources */,
@@ -340,6 +363,7 @@
 				D3F3975929FEAD000087429C /* LoginEndpoint.swift in Sources */,
 				D30863702A01A619005DAEAA /* DetailsViewModel.swift in Sources */,
 				D3F3974829FE8BCD0087429C /* Endpoint.swift in Sources */,
+				D39CBE3C2A02945900678C52 /* MarkdownView.swift in Sources */,
 				D35D59B42A0060A000D9893A /* HomeService.swift in Sources */,
 				D3F3976029FEBF400087429C /* HTTPMethod.swift in Sources */,
 				D35D59B22A0025C500D9893A /* Repo.swift in Sources */,
@@ -574,14 +598,6 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		D308636C2A018E53005DAEAA /* XCRemoteSwiftPackageReference "markdown-webview" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/tomdai/markdown-webview";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -589,11 +605,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D30863472A0157E6005DAEAA /* XCRemoteSwiftPackageReference "LottieUI" */;
 			productName = LottieUI;
-		};
-		D308636D2A018E53005DAEAA /* MarkdownWebView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D308636C2A018E53005DAEAA /* XCRemoteSwiftPackageReference "markdown-webview" */;
-			productName = MarkdownWebView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
