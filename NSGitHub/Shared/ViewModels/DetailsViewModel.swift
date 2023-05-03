@@ -20,6 +20,7 @@ final class DetailsViewModel: ObservableObject {
         readme = ""
     }
     
+    /// This function will get the readme file content from Internet and make it ready for UI to render it
     func getStringFromURL(endpoint: DetailsEndpoint) async {
         guard let url = URL(string: endpoint.baseURL + endpoint.path) else { return }
         
@@ -43,6 +44,7 @@ final class DetailsViewModel: ObservableObject {
         }
     }
     
+    /// This function will dismiss the loading after one second
     private func stopLoading() {
         timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: dismissLoadingAfterSeconds, repeats: false) { [weak self] _ in
