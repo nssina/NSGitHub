@@ -79,6 +79,8 @@ struct HomeView: View {
         .task {
             await vm.getReposList()
         }
+        // To disable split screen on iPad
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
