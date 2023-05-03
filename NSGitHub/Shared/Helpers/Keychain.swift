@@ -25,6 +25,7 @@ open class Keychain {
         }
     }
     
+    /// This function will save data in the keychain
     func save(_ string: String?, forKey key: String) {
         let query = keychainQuery(withKey: key)
         let objectData: Data? = string?.data(using: .utf8, allowLossyConversion: false)
@@ -46,6 +47,7 @@ open class Keychain {
         }
     }
     
+    /// This function will load data from the keychain
     func load(withKey key: String) -> String? {
         let query = keychainQuery(withKey: key)
         query.setValue(kCFBooleanTrue, forKey: kSecReturnData as String)
