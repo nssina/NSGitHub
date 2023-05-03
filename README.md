@@ -1,6 +1,8 @@
 # NSGitHub
 A mini GitHub client written in SwiftUI.
 
+![photo-output 2](https://user-images.githubusercontent.com/26684902/235962977-181c78f7-c887-42d8-88dc-8991e402fe83.jpg)
+
 ## Architechture:
 * MVVM + SwiftUI
 
