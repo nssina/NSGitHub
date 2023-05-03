@@ -15,7 +15,7 @@ struct HomeView: View {
     @ObservedObject private var vm = HomeViewModel()
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             ZStack {
                 if vm.isLoading {
                     VStack(spacing: 10) {
@@ -79,6 +79,7 @@ struct HomeView: View {
     }
 }
 
+// MARK: - Preview
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()

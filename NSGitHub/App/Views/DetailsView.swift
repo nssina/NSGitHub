@@ -16,33 +16,31 @@ struct DetailsView: View {
     @ObservedObject private var vm = DetailsViewModel()
     
     var body: some View {
-        NavigationStack {
-            List {
-                Section(header: Text("`Details`")) {
-                    header
-                }
-                
-                /// Repo Description
-                if let description = item?.description {
-                    Section(header: Text("`Description`")) {
-                        Text(description)
-                            .font(.body)
-                            .multilineTextAlignment(.leading)
-                    }
-                }
-                
-                /// Repo README
-                Section(header: Text("`README.md`")) {
-                    readme
+        List {
+            Section(header: Text("`Details`")) {
+                header
+            }
+            
+            /// Repo Description
+            if let description = item?.description {
+                Section(header: Text("`Description`")) {
+                    Text(description)
+                        .font(.body)
+                        .multilineTextAlignment(.leading)
                 }
             }
-            .navigationTitle(item?.name ?? "Details")
-            .navigationBarTitleDisplayMode(.inline)
-            .task {
-                await vm.getStringFromURL(endpoint: .readme(user: item?.owner?.login ?? "",
-                                                            name: item?.name ?? "",
-                                                            branch: item?.defaultBranch ?? ""))
+            
+            /// Repo README
+            Section(header: Text("`README.md`")) {
+                readme
             }
+        }
+        .navigationTitle(item?.name ?? "Details")
+        .navigationBarTitleDisplayMode(.inline)
+        .task {
+            await vm.getStringFromURL(endpoint: .readme(user: item?.owner?.login ?? "",
+                                                        name: item?.name ?? "",
+                                                        branch: item?.defaultBranch ?? ""))
         }
     }
 }
@@ -103,7 +101,7 @@ extension DetailsView {
                         Text(String(item?.stargazersCount ?? 0))
                             .fontWeight(.semibold)
                         
-                        Text(item?.stargazersCount ?? 0 <= 1 ? "star" : "stars")
+                        Text(item?.stargazersCount ?? 0 == 1 ? "star" : "stars")
                             .fontWeight(.semibold)
                             .foregroundColor(.gray)
                     }
@@ -117,7 +115,7 @@ extension DetailsView {
                     HStack(spacing: 2) {
                         Text(String(item?.forksCount ?? 0))
                         
-                        Text(item?.forksCount ?? 0 <= 1 ? "fork" : "forks")
+                        Text(item?.forksCount ?? 0 == 1 ? "fork" : "forks")
                             .fontWeight(.semibold)
                             .foregroundColor(.gray)
                     }
