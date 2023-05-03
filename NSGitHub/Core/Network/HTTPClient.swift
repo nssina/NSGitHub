@@ -12,6 +12,8 @@ protocol HTTPClient {
 }
 
 extension HTTPClient {
+    
+    /// This function will perform network request
     func sendRequest<T: Decodable>(endpoint: Endpoint, httpMethod: HTTPMethod, responseModel: T.Type) async throws -> T {
         let config: URLSessionConfiguration = .default
         config.requestCachePolicy = .reloadIgnoringLocalCacheData
@@ -53,7 +55,9 @@ extension HTTPClient {
                 throw RequestError.unexpectedStatusCode(response.statusCode)
             }
         } catch {
+            #if DEBUG
             print(error)
+            #endif
             throw RequestError.unknown("Network error")
         }
     }
