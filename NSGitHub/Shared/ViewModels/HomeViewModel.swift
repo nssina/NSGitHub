@@ -34,9 +34,12 @@ final class HomeViewModel: ObservableObject {
         self.token = Keychain.shared.load(withKey: Keys.accessToken)
     }
     
+    /// This function will get the repos from server and populate the UI
     func getReposList() async {
         guard let token = token else { return }
         
+        // We should check the page here,
+        // because we don't want to show the cat loading animation every time!
         if page < 2 {
             DispatchQueue.main.async { [weak self] in
                 self?.isLoading = true
@@ -55,6 +58,8 @@ final class HomeViewModel: ObservableObject {
                     self.repos.append(contentsOf: result.reversed())
                 }
                 
+                // If there was more than 30,
+                // we increase the page number for the next request
                 if result.count == 30 { page += 1 }
             }
         } catch  {
@@ -67,6 +72,7 @@ final class HomeViewModel: ObservableObject {
         }
     }
     
+    /// This function will handle the sorting based on user choice
     func sort(_ sort: SortType) {
         guard sort != sortType else { return }
         sortType = sort
@@ -79,6 +85,7 @@ final class HomeViewModel: ObservableObject {
         }
     }
     
+    /// This function will load more data based on number of page
     func loadMoreItems(item: Repo) {
         let number = repos.count - 5
         guard item.id ?? 0 == repos[number].id else { return }
@@ -86,8 +93,12 @@ final class HomeViewModel: ObservableObject {
         Task { await getReposList() }
     }
     
+    /// This function will dismiss the loading after one second
     private func stopLoading() {
         timer?.invalidate()
+        
+        // Adding one second delay here to let the animation perform and make it visiable
+        // on fast Internet connections :D
         timer = Timer.scheduledTimer(withTimeInterval: dismissLoadingAfterSeconds, repeats: false) { [weak self] _ in
             guard let self = self else { return }
             self.isLoading = false
