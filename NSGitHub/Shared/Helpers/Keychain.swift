@@ -74,8 +74,10 @@ open class Keychain {
     }
     
     private func logPrint(_ items: Any...) {
+        #if DEBUG
         if loggingEnabled {
             print(items)
         }
+        #endif
     }
 }
