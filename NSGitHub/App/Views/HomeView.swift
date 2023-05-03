@@ -27,20 +27,32 @@ struct HomeView: View {
                     .padding(.bottom, 90)
                 } else {
                     
-                    /// Repos list
-                    List {
-                        ForEach(vm.repos, id: \.id) { item in
-                            NavigationLink(destination: DetailsView(item: item)) {
-                                HomeItemView(avatar: item.owner?.avatarURL ?? "",
-                                             owner: item.owner?.login ?? "",
-                                             name: item.name ?? "",
-                                             description: item.description ?? "",
-                                             language: item.language ?? "",
-                                             stars: item.stargazersCount ?? 0)
+                    if vm.repos.count > 0 {
+                        /// Repos list
+                        List {
+                            ForEach(vm.repos, id: \.id) { item in
+                                NavigationLink(destination: DetailsView(item: item)) {
+                                    HomeItemView(avatar: item.owner?.avatarURL ?? "",
+                                                 owner: item.owner?.login ?? "",
+                                                 name: item.name ?? "",
+                                                 description: item.description ?? "",
+                                                 language: item.language ?? "",
+                                                 stars: item.stargazersCount ?? 0)
+                                }
+                                .onAppear {
+                                    guard vm.repos.count > 0 else { return }
+                                    vm.loadMoreItems(item: item)
+                                }
                             }
-                            .onAppear {
-                                vm.loadMoreItems(item: item)
-                            }
+                        }
+                    } else {
+                        /// 404 animation for empty state
+                        HStack {
+                            Spacer()
+                            LottieView(Lottie.error404)
+                                .loopMode(.loop)
+                                .frame(width: 300, height: 200)
+                            Spacer()
                         }
                     }
                 }
