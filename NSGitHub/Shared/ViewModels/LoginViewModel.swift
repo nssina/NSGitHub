@@ -13,12 +13,14 @@ final class LoginViewModel: NSObject, ObservableObject {
     
     private var loginService = LoginService()
     
+    /// This function will present login auth view through web then navigate user to the Home view
     func login() {
         
-        // Step 1: Getting user Code
+        // Creating URL
         let endpoint = LoginEndpoint.login(id: Client.id, uri: Client.uri)
         guard let url = URL(string: endpoint.baseURL + endpoint.path) else { return }
 
+        // Step 1: Getting user Code
         let session = ASWebAuthenticationSession(url: url, callbackURLScheme: CallbackScheme.url) { [weak self] url, error in
             guard let self = self else { return }
 
@@ -40,10 +42,10 @@ final class LoginViewModel: NSObject, ObservableObject {
                 do {
                     let result = try await self.loginService.getAccessToken(id: Client.id, secret: Client.secret, code: code, uri: Client.uri, httpMethod: .post)
                     
-                    // Step 3: Save access token in keychain
+                    // Step 3: Save access token in the keychain
                     Keychain.shared.save(result.accessToken, forKey: Keys.accessToken)
                     
-                    // Step 4: Show home view
+                    // Step 4: Navigate user to Home view
                     self.changeRootView()
                 } catch {
                     #if DEBUG
@@ -61,7 +63,7 @@ final class LoginViewModel: NSObject, ObservableObject {
         session.start()
     }
     
-    func changeRootView() {
+    private func changeRootView() {
         DispatchQueue.main.async {
             UIApplication.shared.connectedScenes
                 .flatMap { ($0 as? UIWindowScene)?.windows ?? [] }
