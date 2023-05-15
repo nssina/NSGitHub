@@ -99,7 +99,7 @@ final class HomeViewModel: ObservableObject {
     
     /// This function will load more data based on number of page
     func loadMoreItems(item: Repo) {
-        guard repos.count == 30 else { return }
+        guard repos.count >= 30 else { return }
         
         let number = repos.count - 5
         guard item.id ?? 0 == repos[number].id else { return }

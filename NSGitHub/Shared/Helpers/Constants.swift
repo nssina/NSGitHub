@@ -9,9 +9,9 @@ import Foundation
 
 // MARK: - Client
 struct Client {
-    static let uri    = "nsgithub://"
-    static let id     = "b4237e637f72f57c44dd"
-    static let secret = "df1d7a3dfdb6812a83c674108494d4e4d5c89156"
+    static let uri    = "YOUR_CLIENT_URI_HERE"
+    static let id     = "YOUR_CLIENT_ID_HERE"
+    static let secret = "YOUR_CLIENT_SECRET_HERE"
 }
 
 // MARK: - Keychain keys
